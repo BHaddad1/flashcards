@@ -10,7 +10,7 @@ JavaScript, Mocha, and Chai were used to create this project.
 
 ## Preview
 
-![Gif of Preview](assets/gifOfFlashCards.mp4)
+![Gif of Preview](./assets/gifpreview.gif)
 
 ## Install / Setup Instructions
 
