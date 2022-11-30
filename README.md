@@ -10,6 +10,8 @@ JavaScript, Mocha, and Chai were used to create this project.
 
 ## Preview
 
+![Gif of Preview](./assets/gifOfFlashCards.mp4)
+
 ## Install / Setup Instructions
 
 Clone this repo down to your local machine.
