@@ -50,7 +50,4 @@ describe("Game", () => {
   it("should keep track of the current round", () => {
     expect(game.currentRound[0]).to.equal(round[0]);
   });
-  it("should start a new round", () => {
-    expect(game.start().deck[0]).to.equal(round[0]);
-  });
 });
