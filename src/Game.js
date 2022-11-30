@@ -12,7 +12,9 @@ class Game {
   start() {
     this.createCards();
     this.createDeck();
-    return this.createRound();
+    this.createRound();
+    this.printMessage(this.createDeck(), this.createRound());
+    this.printQuestion(this.createRound());
   }
   createCards() {
     let questions = prototypeQuestions.map((question) => {
