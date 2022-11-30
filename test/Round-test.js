@@ -90,11 +90,11 @@ describe("Round", () => {
   });
 
   it("should give feedback if the answer is correct", () => {
-    expect(round.takeTurn("blue")).to.equal("Your answer is correct!");
+    expect(round.takeTurn("blue")).to.equal("correct!");
   });
 
   it("should provide feedback if the answer is incorrect", () => {
-    expect(round.takeTurn("pink")).to.equal("Your answer is incorrect :(");
+    expect(round.takeTurn("pink")).to.equal("incorrect :(");
   });
 
   it("should be able to calculate the percentage of correct answers", () => {

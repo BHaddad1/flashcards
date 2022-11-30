@@ -45,11 +45,11 @@ describe("Turn", function () {
   });
 
   it("should provide feedback if the correct answer was chosen", () => {
-    expect(turn.provideFeedback()).to.equal("Your answer is correct!");
+    expect(turn.provideFeedback()).to.equal("correct!");
   });
 
   it("should also provide feedback if the incorrect answer was chosen", () => {
     const newTurn = new Turn("pink", card);
-    expect(newTurn.provideFeedback()).to.equal("Your answer is incorrect :(");
+    expect(newTurn.provideFeedback()).to.equal("incorrect :(");
   });
 });
