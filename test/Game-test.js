@@ -51,6 +51,6 @@ describe("Game", () => {
     expect(game.currentRound[0]).to.equal(round[0]);
   });
   it("should start a new round", () => {
-    expect(game.start().deck[0]).to.equal(round.deck[0]);
+    expect(game.start().deck[0]).to.equal(round[0]);
   });
 });

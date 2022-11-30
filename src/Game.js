@@ -10,17 +10,9 @@ class Game {
     this.currentRound = new Round(this.createDeck());
   }
   start() {
-    let questions = prototypeQuestions.map((question) => {
-      return {
-        id: question.id,
-        question: question.question,
-        answers: question.answers,
-        correctAnswer: question.correctAnswer,
-      };
-    });
-    let deck = new Deck(questions);
-    let round = new Round(deck);
-    return round;
+    this.createCards();
+    this.createDeck();
+    return this.createRound();
   }
   createCards() {
     let questions = prototypeQuestions.map((question) => {
@@ -39,7 +31,6 @@ class Game {
   }
   createRound() {
     let round = new Round(this.createDeck());
-    console.log(round);
     return round;
   }
   printMessage(deck, round) {
