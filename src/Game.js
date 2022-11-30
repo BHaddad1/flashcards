@@ -15,6 +15,8 @@ class Game {
     this.createRound();
     this.printMessage(this.createDeck(), this.createRound());
     this.printQuestion(this.createRound());
+    this.currentRound.calculatePercentCorrect();
+    this.currentRound.endRound();
   }
   createCards() {
     let questions = prototypeQuestions.map((question) => {

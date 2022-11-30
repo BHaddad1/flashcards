@@ -20,18 +20,24 @@ class Round {
       this.correctGuesses.push(this.currentCard.id);
     }
     this.currentCard = this.deck.cards[this.turns];
+    // if the current card is undefined
+    // calc perc correct
+    // end round;
     return turn.provideFeedback();
   }
   returnCurrentCard() {
     return this.currentCard;
   }
   calculatePercentCorrect() {
-    const percentCorrect = (this.correctGuesses.length / this.deck.cards.length) * 100;
-    return percentCorrect.toFixed(0)
+    const percentCorrect =
+      (this.correctGuesses.length / this.deck.cards.length) * 100;
+    return Number(percentCorrect.toFixed(0));
   }
   endRound() {
     const amountCorrect = this.calculatePercentCorrect();
-    return `** Round over! ** You answered ${amountCorrect}% of the questions correctly!`;
+    console.log(
+      `** Round over! ** You answered ${amountCorrect}% of the questions correctly!`
+    );
   }
 }
 module.exports = Round;
