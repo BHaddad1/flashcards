@@ -38,16 +38,19 @@ describe("Game", () => {
     round = new Round(deck);
     game = new Game();
   });
-  // it("should keep track of the current round", () => {
-  //   expect(game.currentRound).to.equal(round);
-  // });
-  // it("should start the game with new questions", () => {
-  //   expect(game.createCards()[0]).to.deep.equal(card);
-  // });
-  // it("should create a new deck", () => {
-  //   expect(game.createDeck().cards[0]).to.deep.equal(deck.cards[0]);
-  // })
+  it("should create new cards", () => {
+    expect(game.createCards()[0]).to.deep.equal(card);
+  });
+  it("should create a new deck", () => {
+    expect(game.createDeck().cards[0]).to.deep.equal(deck.cards[0]);
+  });
   it("should create a new round using the new deck", () => {
-    expect(game.createRound().deck[0]).to.be.an.instanceOf(round);
+    expect(game.createRound().deck[0]).to.deep.equal(round.deck[0]);
+  });
+  it("should keep track of the current round", () => {
+    expect(game.currentRound[0]).to.equal(round[0]);
+  });
+  it("should start a new round", () => {
+    expect(game.start().deck[0]).to.equal(round[0]);
   });
 });
