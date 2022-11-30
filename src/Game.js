@@ -19,6 +19,8 @@ class Game {
       };
     });
     let deck = new Deck(questions);
+    let round = new Round(deck);
+    return round;
   }
   createCards() {
     let questions = prototypeQuestions.map((question) => {
