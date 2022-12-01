@@ -1,7 +1,4 @@
 const Turn = require("../src/Turns");
-const Card = require("./Card");
-const Card1 = require("../src/Card");
-const Deck = require("../src/Deck.js");
 
 class Round {
   constructor(deck) {
@@ -20,9 +17,6 @@ class Round {
       this.correctGuesses.push(this.currentCard.id);
     }
     this.currentCard = this.deck.cards[this.turns];
-    // if the current card is undefined
-    // calc perc correct
-    // end round;
     return turn.provideFeedback();
   }
   returnCurrentCard() {
